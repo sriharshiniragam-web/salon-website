@@ -69,7 +69,7 @@ export default function AboutPage() {
             {team.map((member) => (
               <div key={member.name} className="space-y-4 rounded-[2rem] border border-zinc-200 p-6">
                 <div className="relative h-44 w-full overflow-hidden rounded-3xl">
-                  <Image src={member.image} alt={member.name} fill className="object-cover" />
+                  <Image src={member.image} alt={member.name} width={400} height={300} className="h-full w-full object-cover" />
                 </div>
                 <div className="space-y-1">
                   <p className="text-lg font-semibold text-zinc-950">{member.name}</p>

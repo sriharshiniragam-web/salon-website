@@ -11,7 +11,7 @@ export default function ServiceCard({ title, description, price, image }: Servic
   return (
     <article className="group overflow-hidden rounded-[2rem] border border-zinc-200 bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
       <div className="relative h-48 overflow-hidden bg-zinc-100">
-        <Image src={image} alt={title} fill className="object-cover transition duration-500 group-hover:scale-105" />
+        <Image src={image} alt={title} width={500} height={300} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
       </div>
       <div className="space-y-4 p-6">
         <div className="flex items-center justify-between gap-4">
