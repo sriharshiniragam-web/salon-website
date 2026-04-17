@@ -3,7 +3,6 @@
 /.pnp
 .pnp.js
 yarn.lock
-package-lock.json
 
 # Testing
 /coverage
@@ -28,6 +27,7 @@ yarn-error.log*
 .env*.local
 
 # Vercel
+.vercel
 .vercel
 
 # IDE
