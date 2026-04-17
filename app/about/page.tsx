@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Footer from "../../components/Footer";
 import NavBar from "../../components/NavBar";
 import SectionHeader from "../../components/SectionHeader";
@@ -67,7 +68,9 @@ export default function AboutPage() {
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {team.map((member) => (
               <div key={member.name} className="space-y-4 rounded-[2rem] border border-zinc-200 p-6">
-                <img src={member.image} alt={member.name} className="h-44 w-full rounded-3xl object-cover" />
+                <div className="relative h-44 w-full overflow-hidden rounded-3xl">
+                  <Image src={member.image} alt={member.name} fill className="object-cover" />
+                </div>
                 <div className="space-y-1">
                   <p className="text-lg font-semibold text-zinc-950">{member.name}</p>
                   <p className="text-sm uppercase tracking-[0.24em] text-rose-600">{member.role}</p>
