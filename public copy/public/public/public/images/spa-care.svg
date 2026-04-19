@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fce8d8" />
+      <stop offset="100%" stop-color="#f7c7ae" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grad2)" />
+  <ellipse cx="400" cy="330" rx="220" ry="150" fill="#fff7f0" opacity="0.95" />
+  <path d="M300 280 Q400 180 500 280" stroke="#e1a78c" stroke-width="24" fill="none" />
+  <circle cx="360" cy="380" r="60" fill="#f3c8b2" />
+  <circle cx="450" cy="310" r="38" fill="#f6dbd0" />
+  <text x="50%" y="84%" dominant-baseline="middle" text-anchor="middle" fill="#b76b54" font-family="Arial, Helvetica, sans-serif" font-size="54">Spa Care</text>
+</svg>

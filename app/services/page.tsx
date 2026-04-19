@@ -8,37 +8,37 @@ const services = [
     title: "Signature Haircut",
     description: "Precision styling for a fresh, flattering shape tailored to you.",
     price: "$65",
-    image: "/images/hair-styling.svg",
+    image: "/images/haircut.jpeg",
   },
   {
     title: "Color & Highlights",
     description: "Soft balayage, glossy color, and shine-enhancing treatments.",
     price: "$120",
-    image: "/images/makeup-beauty.svg",
+    image: "/images/colors and highlights.jpeg",
   },
   {
     title: "Facial Treatment",
     description: "Deep-cleansing glow facials that refresh and brighten skin.",
     price: "$85",
-    image: "/images/facial-treatment.svg",
+    image: "/images/facial.jpeg",
   },
   {
     title: "Spa Ritual",
     description: "Tranquil spa therapies for full body renewal and relaxation.",
     price: "$95",
-    image: "/images/spa-care.svg",
+    image: "/images/spa.jpeg",
   },
   {
     title: "Makeup Glow",
     description: "Soft, luminous makeup for weddings, events, or everyday glamour.",
     price: "$75",
-    image: "/images/makeup-beauty.svg",
+    image: "/images/makeup.jpeg",
   },
   {
     title: "Blowout & Style",
     description: "Volume, smoothness, and shine for your perfect finish.",
     price: "$55",
-    image: "/images/hair-styling.svg",
+    image: "/images/blowout.jpeg",
   },
 ];
 

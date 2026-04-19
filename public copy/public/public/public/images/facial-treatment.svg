@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff0e6" />
+      <stop offset="100%" stop-color="#f5bca9" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grad3)" />
+  <circle cx="400" cy="320" r="170" fill="#fff4f0" opacity="0.98" />
+  <path d="M340 220 Q400 120 460 220" stroke="#e7a18c" stroke-width="18" fill="none" />
+  <circle cx="360" cy="330" r="28" fill="#ffd8c5" />
+  <circle cx="440" cy="330" r="28" fill="#ffd8c5" />
+  <path d="M360 380 Q400 450 440 380" stroke="#e7a18c" stroke-width="14" fill="none" />
+  <text x="50%" y="84%" dominant-baseline="middle" text-anchor="middle" fill="#ac6f60" font-family="Arial, Helvetica, sans-serif" font-size="52">Facial Glow</text>
+</svg>
