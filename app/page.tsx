@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import SectionHeader from "../components/SectionHeader";
 import ServiceCard from "../components/ServiceCard";
-import TestimonialCard from "../components/TestimonialCard";
+
 import Image from "next/image";
 
 const featuredServices = [
@@ -157,7 +157,7 @@ export default function Home() {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-zinc-300 text-lg leading-relaxed mb-4">"{testimonial.review}"</p>
+                  <p className="text-zinc-300 text-lg leading-relaxed mb-4">&quot;{testimonial.review}&quot;</p>
                   <div>
                     <p className="font-semibold text-white">{testimonial.name}</p>
                     <p className="text-sm text-zinc-400">{testimonial.role}</p>
