@@ -20,11 +20,7 @@ const services = [
     title: "Facial Treatment",
     description: "Deep-cleansing glow facials that refresh and brighten skin.",
     price: "$85",
-<<<<<<< HEAD
-    image: "/images/facial.jpeg",
-=======
     image: "/images/GLOWfacial.jpeg",
->>>>>>> c65cce6 (fix deploy)
   },
   {
     title: "Spa Ritual",
