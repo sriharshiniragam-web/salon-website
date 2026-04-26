@@ -5,33 +5,6 @@ import ServiceCard from "../components/ServiceCard";
 import TestimonialCard from "../components/TestimonialCard";
 import Image from "next/image";
 
-const highlightImages = [
-  {
-    title: "Blowout",
-    src: "/images/blowout.jpeg",
-  },
-  {
-    title: "Color",
-    src: "/images/colors%20and%20highlights.jpeg",
-  },
-  {
-    title: "Glow Facial",
-    src: "/images/GLOWfacial.jpeg",
-  },
-  {
-    title: "Haircut",
-    src: "/images/haircut.jpeg",
-  },
-  {
-    title: "Makeup",
-    src: "/images/makeup.jpeg",
-  },
-  {
-    title: "Spa",
-    src: "/images/spa.jpeg",
-  },
-];
-
 const featuredServices = [
   {
     title: "Signature Haircut",
@@ -40,22 +13,34 @@ const featuredServices = [
     image: "/images/haircut.jpeg",
   },
   {
+    title: "Colors & Highlights",
+    description: "Vibrant coloring and highlights crafted to suit your style.",
+    price: "$120",
+    image: "/images/colors and highlights.jpeg",
+  },
+  {
     title: "Glow Facial",
     description: "A revitalizing treatment that leaves skin smooth and radiant.",
     price: "$85",
     image: "/images/GLOWfacial.jpeg",
   },
   {
-    title: "Color & Highlights",
-    description: "Soft balayage, glossy color, and shine-enhancing treatments.",
-    price: "$120",
-    image: "/images/colors%20and%20highlights.jpeg",
+    title: "Spa Ritual",
+    description: "Relaxing body care to restore balance and calm.",
+    price: "$95",
+    image: "/images/spa.jpeg",
   },
   {
-    title: "Makeup Glow",
-    description: "Soft, luminous makeup for weddings, events, or everyday glamour.",
+    title: "Flawless Makeup",
+    description: "Professional makeup application for any special occasion.",
     price: "$75",
     image: "/images/makeup.jpeg",
+  },
+  {
+    title: "Signature Blowout",
+    description: "Voluminous and smooth blowout for an effortless look.",
+    price: "$50",
+    image: "/images/blowout.jpeg",
   },
 ];
 
@@ -76,196 +61,113 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#f7f2ee] text-zinc-950">
+    <div className="min-h-screen bg-[#fffcfb] text-zinc-900 selection:bg-rose-200 selection:text-rose-900">
       <NavBar />
-
-      <main className="mx-auto max-w-7xl px-6 py-10 md:px-10">
-        <section className="overflow-hidden rounded-[3rem] bg-[radial-gradient(circle_at_top_left,rgba(251,207,232,0.18),transparent_36%),linear-gradient(180deg,#ffffff_0%,#f7f2ee_100%)] shadow-2xl shadow-rose-200/25">
-          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center px-6 py-10 md:px-10 md:py-14">
-            <div className="space-y-6">
-              <span className="inline-flex rounded-full bg-rose-100 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-rose-700">
-                Luxury salon experience
-              </span>
-
-              <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-zinc-950 sm:text-6xl">
-                Beauty that feels effortless
-              </h1>
-
-              <p className="max-w-2xl text-lg leading-8 text-zinc-600">
-                Calm luxury beauty with expert artistry and glow.              </p>
-
-              <div className="flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-rose-700 px-9 py-3 text-sm font-semibold text-white shadow-lg shadow-rose-700/20 transition hover:bg-rose-800"
-                >
+      <main className="mx-auto max-w-[88rem] px-4 py-8 sm:px-6 lg:px-8">
+        {/* Professional Hero Section with Color Grading */}
+        <section className="relative flex min-h-[85vh] items-center overflow-hidden rounded-[2.5rem] lg:rounded-[3rem] bg-zinc-950 shadow-2xl">
+          <div className="absolute inset-0">
+            <Image 
+              src="/images/bloom_salon.png" 
+              alt="Bloom Salon Interior" 
+              fill
+              priority
+              quality={100}
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+            {/* Color Grading Overlays */}
+            <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/95 via-zinc-900/80 to-rose-950/40 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/50 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-rose-900/10 mix-blend-overlay" />
+          </div>
+          
+          <div className="relative z-10 w-full px-8 py-20 lg:px-16 lg:py-24 xl:px-24">
+            <div className="max-w-2xl space-y-10">
+              <div className="space-y-4">
+                <p className="text-sm font-bold uppercase tracking-[0.3em] text-rose-300">Bloom Salon</p>
+                <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl lg:text-[5.5rem] leading-[1.1]">
+                  Beauty Redefined.
+                </h1>
+              </div>
+              <p className="max-w-xl text-lg font-light leading-relaxed text-zinc-300 sm:text-xl">
+                Expert styling, advanced skincare, and tranquil spa treatments converging in a remarkably elegant environment.
+              </p>
+              <div className="flex flex-col gap-5 sm:flex-row pt-4">
+                <a href="/contact" className="group inline-flex items-center justify-center rounded-full bg-rose-600 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-rose-600/20 transition-all hover:bg-rose-500 hover:shadow-rose-500/40 hover:-translate-y-0.5">
                   Book Appointment
                 </a>
-                <a
-                  href="/services"
-                  className="inline-flex items-center justify-center rounded-full border border-rose-300 bg-white px-9 py-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-50"
-                >
+                <a href="/services" className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/30">
                   Explore Services
                 </a>
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="rounded-[2rem] border border-zinc-200 bg-white/90 p-5 shadow-sm">
-                  <p className="text-sm uppercase tracking-[0.3em] text-rose-600">Expert stylists</p>
-                  <p className="mt-3 text-xl font-semibold text-zinc-950">Human-led beauty planning</p>
-                </div>
-                <div className="rounded-[2rem] border border-zinc-200 bg-white/90 p-5 shadow-sm">
-                  <p className="text-sm uppercase tracking-[0.3em] text-rose-600">Care with calm</p>
-                  <p className="mt-3 text-xl font-semibold text-zinc-950">Personalized treatments for every guest</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="overflow-hidden rounded-[3rem] shadow-2xl shadow-slate-950/15">
-                <Image
-                  src="/images/haircut.jpeg"
-                  alt="Salon stylist with client"
-                  width={900}
-                  height={760}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-
-              <div className="absolute inset-x-0 top-0 h-full w-full rounded-[3rem] bg-gradient-to-r from-transparent via-transparent to-slate-950/20" />
-
-              <div className="absolute bottom-6 left-6 w-[calc(100%-4rem)] max-w-sm rounded-[2rem] bg-white/80 px-6 py-5 shadow-2xl shadow-slate-950/20 backdrop-blur-xl ring-1 ring-white/80">
-                <p className="text-sm uppercase tracking-[0.28em] text-rose-600">Salon analytics</p>
-                <h2 className="mt-3 text-3xl font-semibold text-zinc-950">Live service overview</h2>
-                <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {[
-                    { label: "Clients booked", value: "128" },
-                    { label: "Service rating", value: "4.9/5" },
-                    { label: "Avg. satisfaction", value: "96%" },
-                    { label: "Team availability", value: "5 stylists" },
-                  ].map((item) => (
-                    <div key={item.label} className="rounded-[1.75rem] bg-slate-950/5 p-4">
-                      <p className="text-xs uppercase tracking-[0.32em] text-rose-600">{item.label}</p>
-                      <p className="mt-3 text-2xl font-semibold text-zinc-950">{item.value}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="absolute -right-8 top-8 grid gap-4">
-                <div className="w-48 rounded-[2rem] bg-white/90 p-4 shadow-2xl shadow-slate-950/15 backdrop-blur-xl ring-1 ring-white/70">
-                  <div className="relative h-28 overflow-hidden rounded-[1.75rem]">
-                    <Image
-                      src="/images/blowout.jpeg"
-                      alt="Blowout service"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <p className="mt-3 text-sm font-semibold text-zinc-950">Blowout</p>
-                </div>
-                <div className="w-48 rounded-[2rem] bg-white/90 p-4 shadow-2xl shadow-slate-950/15 backdrop-blur-xl ring-1 ring-white/70">
-                  <div className="relative h-28 overflow-hidden rounded-[1.75rem]">
-                    <Image
-                      src="/images/GLOWfacial.jpeg"
-                      alt="Glow facial service"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <p className="mt-3 text-sm font-semibold text-zinc-950">Glow Facial</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-10 rounded-[2rem] border border-zinc-200 bg-zinc-50 px-4 py-5 shadow-sm sm:px-6">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-zinc-700">Image gallery</p>
-                <p className="text-sm text-zinc-500">Real human service previews in a polished gallery strip.</p>
-              </div>
-              <div className="inline-flex rounded-full bg-rose-100 px-4 py-2 text-sm font-semibold text-rose-700">
-                New look
-              </div>
-            </div>
-            <div className="mt-6 overflow-x-auto pb-2">
-              <div className="inline-flex gap-4">
-                {highlightImages.map((item) => (
-                  <div key={item.title} className="min-w-[220px] overflow-hidden rounded-[1.75rem] border border-zinc-200 bg-white shadow-sm">
-                    <div className="relative h-40 w-[220px]">
-                      <Image src={item.src} alt={item.title} fill className="object-cover" />
-                    </div>
-                    <div className="px-4 py-3">
-                      <p className="text-sm font-semibold text-zinc-950">{item.title}</p>
-                      <p className="mt-1 text-xs text-zinc-500">Premium salon service</p>
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
         </section>
 
-        <section className="mt-12 rounded-[2.5rem] bg-white p-10 shadow-sm shadow-zinc-200/50">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        {/* Featured Services Section */}
+        <section className="mt-8 rounded-[2.5rem] lg:rounded-[3rem] bg-white p-8 sm:p-12 lg:p-16 shadow-sm shadow-zinc-200/50 ring-1 ring-zinc-100">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between mb-12">
             <SectionHeader
-              title="Featured Services"
-              subtitle="A selection of signature treatments for beauty and wellness."
+              title="Signature Treatments"
+              subtitle="A curated selection of our most loved beauty and wellness services."
             />
-            <a
-              href="/services"
-              className="inline-flex items-center justify-center rounded-full bg-rose-100 px-5 py-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-200"
-            >
+            <a href="/services" className="inline-flex items-center justify-center rounded-full bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition-colors hover:bg-rose-100 ring-1 ring-inset ring-rose-200/50">
               View full service menu
             </a>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {featuredServices.map((service) => (
               <ServiceCard key={service.title} {...service} />
             ))}
           </div>
         </section>
 
-        <section className="mt-12 rounded-[2.5rem] bg-white p-10 shadow-sm shadow-zinc-200/50">
-          <div className="lg:flex lg:items-center lg:justify-between">
-            <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-rose-600">About</p>
-              <h2 className="mt-3 text-3xl font-semibold text-zinc-950">Beauty with calm and elevated detail.</h2>
-              <p className="mt-5 text-lg leading-8 text-zinc-600">
-                Bloom Salon brings together expert beauty services, thoughtful hospitality, and a gentle atmosphere designed to make every guest feel cherished.
+        {/* About & Testimonials Wrapper */}
+        <div className="mt-8 grid gap-8 lg:grid-cols-2">
+          {/* About Section */}
+          <section className="flex flex-col justify-center rounded-[2.5rem] lg:rounded-[3rem] bg-rose-50/50 p-8 sm:p-12 lg:p-16 ring-1 ring-rose-100/50">
+            <div className="max-w-lg">
+              <p className="text-sm font-bold uppercase tracking-[0.24em] text-rose-600">The Experience</p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-950 sm:text-4xl">Elevated detail in every moment.</h2>
+              <p className="mt-6 text-lg leading-relaxed text-zinc-600">
+                Bloom Salon brings together expert artistry, thoughtful hospitality, and a gentle atmosphere designed to make every guest feel entirely cherished.
               </p>
+              <a href="/about" className="mt-10 inline-flex items-center justify-center rounded-full bg-zinc-900 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:bg-zinc-800 hover:-translate-y-0.5">
+                Discover our story
+              </a>
             </div>
-            <a
-              href="/about"
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-rose-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-rose-800 lg:mt-0"
-            >
-              Learn more
-            </a>
-          </div>
-        </section>
+          </section>
 
-        <section className="mt-12 rounded-[2.5rem] bg-white p-10 shadow-sm shadow-zinc-200/50">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-rose-600">Testimonials</p>
-              <h2 className="mt-3 text-3xl font-semibold text-zinc-950">Loved by our guests</h2>
+          {/* Testimonials Section */}
+          <section className="flex flex-col justify-center rounded-[2.5rem] lg:rounded-[3rem] bg-zinc-900 p-8 sm:p-12 lg:p-16 text-white shadow-xl shadow-zinc-900/10">
+            <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.24em] text-rose-400">Testimonials</p>
+                <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Guest love</h2>
+              </div>
             </div>
-            <a
-              href="/testimonials"
-              className="inline-flex items-center justify-center rounded-full border border-rose-200 bg-rose-50 px-5 py-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
-            >
-              Read all reviews
-            </a>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {testimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.name} {...testimonial} />
-            ))}
-          </div>
-        </section>
+            <div className="grid gap-6">
+              {testimonials.map((testimonial) => (
+                <div key={testimonial.name} className="rounded-2xl bg-zinc-800/50 p-6 border border-zinc-700/50 backdrop-blur-sm">
+                  <div className="flex text-rose-400 mb-3">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <svg key={i} className="h-5 w-5 fill-current" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-zinc-300 text-lg leading-relaxed mb-4">"{testimonial.review}"</p>
+                  <div>
+                    <p className="font-semibold text-white">{testimonial.name}</p>
+                    <p className="text-sm text-zinc-400">{testimonial.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
       </main>
-
       <Footer />
     </div>
   );
