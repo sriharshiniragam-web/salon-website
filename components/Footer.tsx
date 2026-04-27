@@ -14,10 +14,10 @@ export default function Footer() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-zinc-500">Contact</p>
             <ul className="mt-4 space-y-3 text-sm text-zinc-600">
-              <li>123 Rosewood Avenue</li>
-              <li>Beauty City, BL 90210</li>
-              <li>(555) 987-6543</li>
-              <li>hello@bloom-salon.com</li>
+              <li>Plot 45, Road No. 36, Jubilee Hills</li>
+              <li>Hyderabad, Telangana 500033</li>
+              <li>+91 98765 43210</li>
+              <li>hello@bloomsalon.in</li>
             </ul>
           </div>
           <div>
